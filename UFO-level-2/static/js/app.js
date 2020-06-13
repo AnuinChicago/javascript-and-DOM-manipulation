@@ -36,13 +36,29 @@ button.on("click", function() {
     console.log(myCity);
 
     // Create a custom filtering function to match  with input date
-    function filterData(x) {
-        return x.datetime === mydateTime && x.city === myCity && x.state===myState && x.country === myCountry && x.shape ===myShape;
-      }
+    // function filterData(x) {
+    //     return x.datetime === mydateTime && x.city === myCity && x.state===myState && x.country === myCountry && x.shape ===myShape;
+    //   }
       
+    var filteredData =tableData;
+    if (mydateTime) {
+        filteredData = filteredData.filter(x => x.datetime === mydateTime);
+    }
+    if (myCountry) {
+        filteredData = filteredData.filter(x => x.country === myCountry);
+    }
+    if (myState) {
+        filteredData = filteredData.filter(x => x.state === myState);
+    }
+    if (myCity) {
+        filteredData = filteredData.filter(x => x.city === myCity);
+    }
+    if (myShape) {
+        filteredData = filteredData.filter(x => x.shape === myShape);
+    }
     // filter() uses the custom function as its argument
-    var filteredData = tableData.filter(filterData);
-    console.log(filteredData)
+    // var filteredData = tableData.filter(filterData);
+    // console.log(filteredData)
 
     
     //Make table with filtered data
