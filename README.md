@@ -9,6 +9,8 @@ In addition, JavaScript was used to create multiple search categories so the use
 
 Finally, CSS and Bootstrap were used to create the styling of webpage.
 
+![ufo](ufo.png)
+
 
 
 
